@@ -16,16 +16,17 @@ Antes de começar, vamos organizar nosso setup.
 ### Resumo
 O que veremos na aula de hoje?
 * [Entendendo sobre Responsividade](#Responsividade)
-* [Tipos de imagem](#tiposdeimagem)
 * [Unidade de medida](#unidadesdemedida)
+* [Tipos de imagem](#tiposdeimagem)
 * [Media Querie](#mediaquery)
 
 
 ## Conteúdo
-### Entendendo a responsividade
+### Conceito de Responsividade e exemplos
+
+Um **layout responsivo** é aquele que se "adapta" automaticamente aos dispositivos no qual ele está sendo visualizado, e é parte fundamental do conceito de **design responsivo**, que nada mais é do que a possibilidade de **adaptação fluida** de um site a diversos tamanhos de tela.
 
 ![gif-responsivo](https://media.giphy.com/media/b2CD0Qrq2ulwY/giphy.gif)
-Um **layout responsivo** é aquele que se "adapta" automaticamente aos dispositivos no qual ele está sendo visualizado, e é parte fundamental do conceito de **design responsivo**, que nada mais é do que a possibilidade de **adaptação fluida** de um site a diversos tamanhos de tela.
 
  #### Tipos de dispositivos: 
   - Notebooks 
@@ -34,10 +35,10 @@ Um **layout responsivo** é aquele que se "adapta" automaticamente aos dispositi
   - Televisões
 
 ### Entendendo a responsividade
+O design responsivo expande de forma fluída, enquanto o adaptativo aguarda a tela terminar a expansão.
 
 ![responsivo-adaptativo](https://www.oficinadanet.com.br/imagens/post/13652/3038367-slide-s-1-9-gifs-that-explain-responsive-design-brilliantly-01responsive-vs-adaptive.gif)
 
-O design responsivo expande de forma fluída, enquanto o adaptativo aguarda a tela terminar a expansão.
 **Vantagens:**
 
 * Usabilidade (design adaptado para diversos formatos);
@@ -153,6 +154,101 @@ Vamos conferir o [exemplo 😊](./exemplos/exemplo-medidas-viewport.html)
   **vmax e vmin:** [UNIDADES CSS RELATIVAS: VW, VH, VMAX, VMIN (CSS3)](https://www.youtube.com/watch?v=g__c-7M9Xzk&t=94s)
 
   **ex e ch:** [UNIDADES CSS RELATIVAS: %, REM, EM, CH, EX (CSS3)](https://www.youtube.com/watch?v=etM0JBeFbf8).
+
+  ### Media Queries
+
+**Media queries** é uma técnica de consulta de mídia que atribui diferentes estilos CSS para cada resolução de tela detectada.
+
+As media queries definem condições para utilização de estilos CSS. Se o dispositivo de acesso do usuário se adequar as **condições** definidas, se aplicam os estilos definidos nos elementos. 
+
+#### Breakpoints
+
+Os **breakpoints**, literalmente, são pontos de interrupção. São pontos que a interface do usuário será adaptada para um novo tamanho de tela, ou densidade de pixels.
+Eles são aplicados graças as media queries, pois seus valores são utilizados na sintaxe, definindo a partir de qual ponto os estilos CSS serão aplicados.
+
+
+![gif-breakpoints](https://www.oficinadanet.com.br/imagens/post/13652/3038367-slide-s-3-9-gifs-that-explain-responsive-design-brilliantly-03with-breakpoints-vs-without-breakpoints-1.gif)
+
+##### Os brekpoints mais utilizados são:
+
+1. **@media (min-width:320px)**{ /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
+2. **@media (min-width:480px)** { /* smartphones, Android phones, landscape iPhone */ }
+3. **@media (min-width:600px)** { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+4. **@media (min-width:801px)** { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+5. **@media (min-width:1025px)** { /* big landscape tablets, laptops, and desktops */ }
+6. **@media (min-width:1281px)** { /* hi-res laptops and desktops */ }
+
+* Referência: [Breakpoints](https://gist.github.com/janily/8453473)
+
+**Importante:** Quando formos utilizar media queries, o primeiro passo é adicionar uma metatag chamada viewport  no código - lembra que falamos dela lá em cima. Essa tag vai passar instruções para o browser renderizar o conteúdo do site conforme o tamanho do dispositivo.
+
+
+```html
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+```
+
+![breakpoints-media-queries](./assets/img/breakpoints-media-queries.jpg)
+
+**Sintaxe:**
+
+```css
+/* condição até 600px */
+@media (max-width: 600px) { 
+  .nome-da-classe {
+    color: #fff; /* elemento que vai ser modificado/adicionado/sobrescrito nessa resolução */
+  }
+}
+
+/* condição a partir de 900px, utilizado em abordagem de mobile-first */
+@media (min-width: 900px) { 
+  .nome-da-classe {
+    color: #fff; /* elemento que vai ser modificado/adicionado/sobrescrito nessa resolução */
+  }
+}
+
+/* condição a partir de 600px até 900px */
+@media (min-width: 600px) and (max-width: 900px) { 
+  .nome-da-classe {
+    color: #fff; /* elemento que vai ser modificado/adicionado/sobrescrito nessa resolução */
+  }
+}
+```
+![breakpoints-comuns](./assets/img/breakpoints-comuns.jpg)
+
+#### Imagens responsivas
+
+Imagens responsivas respondem ao tamanho da tela para escalar porporcionalmente, sem ficar pixeladas ou desproporcionais.
+
+![imagem-maior](./assets/img/imagem-maior.jpg)
+
+Uma técnica para conseguirmos ter imagens responsivas é a seguinte:
+
+```css
+.img-responsiva {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+```
+
+- Explicação: Criamos uma classe que podemos aplicar a todas as imagens que estão no html que queremos que fiquem responsivas. As imagens que tiverem essa classe vão ter 100% de largura com altura sempre proporcional a largura. O atributo `max-width: 100%` vai assegurar que essa imagem não estique mais do que o tamanho original dela permite.
+
+![max-width](https://www.oficinadanet.com.br/imagens/post/13652/3038367-slide-s-7-9-gifs-that-explain-responsive-design-brilliantly-07max-width-vx-no-max-width-1.gif)
+
+#### Display Flex [CONTEÚDO BÔNUS]
+
+A propriedade de css display: flex permite alinhar com facilidade elementos lado a lado.
+Você deve adicionar a propriedade no elemento pai para alinhar o conteúdo filho lado a lado.
+![img-displayflex](https://cdn-media-1.freecodecamp.org/images/HHwxqz2N4bNksz9YwcMBAtD0z9TTCxeNXNBS)
+
+
+O display: flex tem propriedade complementares que permitem alinhar os elementos filhos ao centro, à direita, à esquerda, tanto na horizontal como na vertical.
+
+![gif-displayflex](https://cdn-media-1.freecodecamp.org/images/6WwoIEc45lUHUcFQCmD8GmziiISm2lO64Y1-)
 
 
 ***

@@ -1,0 +1,26 @@
+.block-1{
+    background-color: blueviolet;
+    height: 200px;
+    width: 200px;
+
+}
+.block-2{
+    background-color: rgb(160, 85, 230);
+    height: 200px;
+    width: 200px;
+}
+.block-3{
+    background-color: rgb(66, 27, 103);
+    height: 200px;
+    width: 200px;
+}
+.block-4{
+    background-color: rgb(36, 17, 54);
+    height: 200px;
+    width: 200px;
+}
+.container{
+    background-color: grey;
+    display: flex;
+    height: 300px;
+}
