@@ -1,0 +1,68 @@
+/* códigos para entender o flex-box */
+
+/* .block-1{
+    background-color: blueviolet;
+    height: 200px;
+    width: 200px;
+
+}
+.block-2{
+    background-color: rgb(160, 85, 230);
+    height: 200px;
+    width: 200px;
+}
+.block-3{
+    background-color: rgb(66, 27, 103);
+    height: 200px;
+    width: 200px;
+}
+.block-4{
+    background-color: rgb(36, 17, 54);
+    height: 200px;
+    width: 200px;
+}
+.container{
+    background-color: grey;
+    display: flex;
+    height: 300px;
+} */
+/* CÓDIGO DAS CAIXINHAS PARA O FLEXBOX :)  */
+.block-1{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+
+}
+.block-2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(109, 71, 144);
+}
+.block-3{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(34, 7, 59);
+}
+.block-4{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(67, 27, 104);
+}
+.container{
+    background-color: gray;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+
+
+}
+
+@media (max-width:500px){
+    .container{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .block-3{
+        background-color: black;
+    }
+}

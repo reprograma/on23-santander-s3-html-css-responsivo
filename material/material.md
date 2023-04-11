@@ -31,3 +31,12 @@
 
 [Centralizando conteúdos com `<div>s` no HTML](https://www.devmedia.com.br/como-centralizar-divs-em-html-e-css/37568)
 
+### VIDEOS SOBRE FLEXBOX COM MAIS LINKS E GAMES 
+
+[Rafaela Ballerini - flexbox](https://www.youtube.com/watch?v=KbjLtEgmZ_E)
+
+[Grasshopper](https://grasshopper.app/pt_br/)
+
+[Como felxbox funciona - freecode bootcamp](https://www.freecodecamp.org/news/an-animated-guide-to-flexbox-d280cf6afc35/)
+
+[Guia completo de flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
