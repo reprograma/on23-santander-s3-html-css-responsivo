@@ -4,8 +4,13 @@
     font-family: 'Montserrat', sans-serif;
     background-color: black;
 }
+.container{
+    font-size: 16px;
+}
+
  h1{
     color: rgb(255, 255, 255);
+    font-size: 2em;
 }
 
 p{
@@ -18,11 +23,11 @@ p{
     max-width: 100%;
 } 
 
-@media (min-width: 768px) {
+@media (max-width: 800px) {
     h1{
-        color: rgba(249, 4, 4, 0.843);
+        color: rgba(55, 164, 223, 0.843);
     }
     p{
-        font-size: 32px;
+        font-size: 12px;
     }
 }

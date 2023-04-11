@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(151, 131, 169);
+}
+h1, p {
+    color: white;
+}
+.icon-rocks{
+    height: 200px;
+    width: 200px;
+    border-radius: 50px;
+}
+.git-icon{
+    height: 30px;
+    width: 30px;
+    padding: 1em;
+
+}
+.link-icon{
+    height: 30px;
+    width: 30px;
+    padding: 1em;
+
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    padding: 400px;
+}
+
+@media (max-width: 600px){
+    .container{
+        flex-direction:column-reverse;
+    }
+    
+}
