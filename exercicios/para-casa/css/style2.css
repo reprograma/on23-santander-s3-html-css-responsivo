@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+}
+
+header {
+    background-image: url(../IMG/fundo.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main {
+    padding: 80px;
+}
+
+h1,
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(59, 56, 56);
+}
+
+.img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+}
+
+img {
+    border-radius: 30px;
+}
+
+.imagem {
+    width: 70%;
+}
+
+.botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(59, 56, 56);
+}
