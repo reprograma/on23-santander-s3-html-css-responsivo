@@ -1,0 +1,62 @@
+body{
+    background-color: rosybrown;
+    font-family: 'Oswald', sans-serif;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav li:last-child {
+    margin-right: 0;
+  }
+  
+  nav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+
+  }
+  .menu{
+    font-size: 20px;
+ 
+  }
+  .img-danca{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+  .div-pai{
+    font-size: 5px;
+  }
+  .tamanho{
+    font-size: 4em;
+    text-align: justify;
+  }
+  @media screen and (min-width: 1024px) {
+    /* Estilos para desktop */
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Estilos para tablet */
+  }  
+  @media screen and (max-width: 767px) {
+    /* Estilos para celular */
+    .menu{
+        display:flex ;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        
+    
+        
+    }
+  }
+  
